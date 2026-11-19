@@ -6,7 +6,7 @@
 
 Código desarrollado en mi Trabajo de Fin de Grado en Física: implementación en **PennyLane** de tres algoritmos cuánticos para resolver ecuaciones diferenciales ordinarias, aplicados a una versión simplificada de las **ecuaciones de evolución DGLAP** de la física de altas energías, como caso particular final. 
 
-La memoria del trabajo se encuentra en [Memoria del Trabajo](docs/TFG.pdf)
+[Memoria del Trabajo](docs/TFG.pdf)
 
 El objetivo no es obtener ventaja cuántica (todo se ejecuta en simulador), sino estudiar cómo se comportan estos algoritmos en un problema físico real: qué precisión alcanzan, cómo convergen y dónde están sus limitaciones. Caracterizaremos los puntos relevantes de cada método, así como los impedimentos y restricciones que nos encontramos al trabajar con ellos.
 
