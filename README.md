@@ -77,7 +77,7 @@ Notas para ejecutar los notebooks:
 
 ## Autoría
 
-TFG de **\<Eduardo Criado Pérez\>**, Grado en Física, **\<Universidad de Salamanca\>**, curso 2025-2026.
+TFG de **Eduardo Criado Pérez**, Grado en Física, **Universidad de Salamanca**, curso 2025-2026.
 
 Dirigido por Germán Fabricio Roberto Sborlini y David Rentería Estrada.
 
