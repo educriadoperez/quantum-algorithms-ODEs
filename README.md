@@ -4,27 +4,14 @@
 ![PennyLane](https://img.shields.io/badge/PennyLane-0.44-ff69b4)
 ![JAX](https://img.shields.io/badge/JAX-autodiff-9cf)
 
-Código desarrollado en mi Trabajo de Fin de Grado en Física: implementación en **PennyLane** de tres algoritmos cuánticos para resolver ecuaciones diferenciales ordinarias, aplicados a una versión simplificada de las **ecuaciones de evolución DGLAP** de la física de altas energías.
+Código desarrollado en mi Trabajo de Fin de Grado en Física: implementación en **PennyLane** de tres algoritmos cuánticos para resolver ecuaciones diferenciales ordinarias, aplicados a una versión simplificada de las **ecuaciones de evolución DGLAP** de la física de altas energías, como caso particular final.
 
-El objetivo no es obtener ventaja cuántica (todo se ejecuta en simulador), sino estudiar **cómo se comportan estos algoritmos en un problema físico real**: qué precisión alcanzan, cómo convergen y dónde están sus limitaciones.
+El objetivo no es obtener ventaja cuántica (todo se ejecuta en simulador), sino estudiar cómo se comportan estos algoritmos en un problema físico real: qué precisión alcanzan, cómo convergen y dónde están sus limitaciones. Caracterizaremos los puntos relevantes de cada método, así como los impedimentos y restricciones que nos encontramos al trabajar con ellos.
 
-## Contexto físico
+## Motivación
+La computación cuántica se presenta como un campo que promete mejorar la escala de ejecución de ciertos algoritmos clásicos. Algunos ejemplos son el algoritmo de Shor para la factorización en números primos, que introduce una aceleración exponencial a su mejor contraparte clásica, o el algoritmo de Grover de búsqueda en una lista, que aporta una mejora cuadrática. Su principal impedimento es la dificultad de implementación en hardware real.
 
-Las ecuaciones DGLAP describen cómo evolucionan las distribuciones de partones dentro de un hadrón al cambiar la escala de energía. Para desacoplar los quarks de los gluones se trabaja con el sector **no singlete**, y en el espacio de momentos de Mellin, a orden dominante (LO), la ecuación se reduce a una EDO lineal:
-
-$$
-\frac{\partial \tilde{q}_{NS}(N,t)}{\partial t} = \gamma_{NS}(N,t)\,\tilde{q}_{NS}(N,t),
-\qquad \alpha_s(t) = \frac{2\pi}{\beta_0\, t}
-$$
-
-| Parámetro | Valor |
-|---|---|
-| Momento de Mellin | $N = 2$ |
-| Coeficiente de la función beta ($n_f = 5$) | $\beta_0 = 7.67$ |
-| Escala inicial / final | $Q_0 = 10$ GeV → $Q_f = 1000$ GeV |
-| Escala de QCD | $\Lambda_{QCD} = 0.2$ GeV |
-
-Los resultados se mantienen en el espacio de momentos (no se aplica la transformada inversa de Mellin).
+La investigación en métodos cuánticos para la resolución de ecuaciones diferenciales es un campo que se empieza a consolidar alrededor de 2017-2020 junto con la llamada era NISQ de la computación cuántica, que abre paso a una aplicación a mayor escala de algoritmos como el HHL, y la exploración de los denominados algoritmos cuánticos variacionales (VQA). Se trata, pues, de un campo muy actual y relevante de investigación que está supeditado a las estrictas limitaciones tecnológicas que tiene la computación cuántica a día de hoy, pero que quizá algún día se puedan desplegar llegando a competir con sus contrapartes clásicas.
 
 ## Algoritmos implementados
 
