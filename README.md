@@ -17,9 +17,9 @@ La investigación en métodos cuánticos para la resolución de ecuaciones difer
 
 | Método | Idea | Notebook |
 |---|---|---|
-| **VQLS** (*Variational Quantum Linear Solver*) | Se discretiza la EDO con diferencias finitas / Euler y se resuelve el sistema lineal resultante con un circuito variacional, minimizando una función de coste local estimada con pruebas de Hadamard. | [`01_vqls.ipynb`](notebooks/01_vqls.ipynb) |
-| **VQC-PINN con Chebyshev** | Un circuito cuántico variacional con mapa de características de Chebyshev actúa como red neuronal informada por la física: se entrena minimizando el residuo de la EDO. | [`02_chebyshev_vqc_pinn.ipynb`](notebooks/02_chebyshev_vqc_pinn.ipynb) |
-| **Integrador de Euler cuántico** | El paso de Euler se implementa con aritmética en punto fijo sobre registros de qubits, con sumadores basados en la QFT y restas por complemento. | [`03_euler_cuantico_qft.ipynb`](notebooks/03_euler_cuantico_qft.ipynb) |
+| **VQLS** (*Variational Quantum Linear Solver*) | Se discretiza la EDO con diferencias finitas / Euler y se resuelve el sistema lineal resultante con un circuito variacional, minimizando una función de coste local estimada con pruebas de Hadamard. | [`01_vqls.ipynb`](VQLS_method.ipynb) |
+| **VQC-PINN con Chebyshev** | Un circuito cuántico variacional con mapa de características de Chebyshev actúa como red neuronal informada por la física: se entrena minimizando el residuo de la EDO. | [`02_chebyshev_vqc_pinn.ipynb`](QuantumChebyshevMethod.ipynb) |
+| **Integrador de Euler cuántico** | El paso de Euler se implementa con aritmética en punto fijo sobre registros de qubits, con sumadores basados en la QFT y restas por complemento. | [`03_euler_cuantico_qft.ipynb`](QuantumArithmetics_euler_method.ipynb) |
 
 ### VQLS en detalle
 
@@ -77,7 +77,7 @@ Notas para ejecutar los notebooks:
 
 ## Autoría
 
-TFG de **\<Nombre y apellidos\>**, Grado en Física, **\<Universidad\>**, curso 2025-2026.
+TFG de **\<Eduardo Criado Pérez\>**, Grado en Física, **\<Universidad de Salamanca\>**, curso 2025-2026.
 
 Dirigido por Germán Fabricio Roberto Sborlini y David Rentería Estrada.
 
