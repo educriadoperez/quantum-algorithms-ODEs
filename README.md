@@ -4,7 +4,9 @@
 ![PennyLane](https://img.shields.io/badge/PennyLane-0.44-ff69b4)
 ![JAX](https://img.shields.io/badge/JAX-autodiff-9cf)
 
-Código desarrollado en mi Trabajo de Fin de Grado en Física: implementación en **PennyLane** de tres algoritmos cuánticos para resolver ecuaciones diferenciales ordinarias, aplicados a una versión simplificada de las **ecuaciones de evolución DGLAP** de la física de altas energías, como caso particular final.
+Código desarrollado en mi Trabajo de Fin de Grado en Física: implementación en **PennyLane** de tres algoritmos cuánticos para resolver ecuaciones diferenciales ordinarias, aplicados a una versión simplificada de las **ecuaciones de evolución DGLAP** de la física de altas energías, como caso particular final. 
+
+La memoria del trabajo se encuentra en [Memoria del Trabajo](docs/TFG.pdf)
 
 El objetivo no es obtener ventaja cuántica (todo se ejecuta en simulador), sino estudiar cómo se comportan estos algoritmos en un problema físico real: qué precisión alcanzan, cómo convergen y dónde están sus limitaciones. Caracterizaremos los puntos relevantes de cada método, así como los impedimentos y restricciones que nos encontramos al trabajar con ellos.
 
@@ -12,18 +14,6 @@ El objetivo no es obtener ventaja cuántica (todo se ejecuta en simulador), sino
 La computación cuántica se presenta como un campo que promete mejorar la escala de ejecución de ciertos algoritmos clásicos. Algunos ejemplos son el algoritmo de Shor para la factorización en números primos, que introduce una aceleración exponencial a su mejor contraparte clásica, o el algoritmo de Grover de búsqueda en una lista, que aporta una mejora cuadrática. Su principal impedimento es la dificultad de implementación en hardware real.
 
 La investigación en métodos cuánticos para la resolución de ecuaciones diferenciales es un campo que se empieza a consolidar alrededor de 2017-2020 junto con la llamada era NISQ de la computación cuántica, que abre paso a una aplicación a mayor escala de algoritmos como el HHL, y la exploración de los denominados algoritmos cuánticos variacionales (VQA). Se trata, pues, de un campo muy actual y relevante de investigación que está supeditado a las estrictas limitaciones tecnológicas que tiene la computación cuántica a día de hoy, pero que quizá algún día se puedan desplegar llegando a competir con algunos algoritmos clásicos.
-
-## Algoritmos implementados
-
-```mermaid
-flowchart LR
-    A[EDO DGLAP<br/>no singlete] --> B[VQLS]
-    A --> C[VQC-PINN<br/>con Chebyshev]
-    A --> D[Integrador de Euler<br/>con aritmética cuántica]
-    B --> E[Comparación con la<br/>solución clásica]
-    C --> E
-    D --> E
-```
 
 | Método | Idea | Notebook |
 |---|---|---|
@@ -58,18 +48,6 @@ Los resultados completos, con gráficas y discusión, están en la memoria del T
 - VQLS devuelve un estado normalizado. Midiendo en la base computacional solo se obtienen los **módulos** de las componentes (se pierde el signo) y la escala global hay que fijarla con información adicional.
 - Los tamaños son pequeños (unos pocos qubits). El coste del cálculo de la función de coste crece rápido con el número de términos de Pauli.
 
-## Estructura del repositorio
-
-```
-.
-├── README.md
-├── notebooks/
-│   ├── 01_vqls.ipynb
-│   ├── 02_chebyshev_vqc_pinn.ipynb
-│   └── 03_euler_cuantico_qft.ipynb
-└── docs/
-    └── memoria_tfg.pdf
-```
 
 ## Instalación y uso
 
